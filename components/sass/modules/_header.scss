@@ -1,0 +1,28 @@
+#header{
+  @include clearfix;
+
+  .headerContainer{
+    background-color: lighten($blueLight, 35%);
+  } // headerContainer
+
+  .branDescription{
+    @include backImage('http://svrmap.com/bigmove/images/road.gif');
+    margin: 0 auto;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+
+    .item{
+      width: 10rem;
+      height: 5rem;
+      font-size: 2.5em;
+      text-align: center;
+      line-height: 1.5em;
+    } // item
+  } //branDescription
+
+} // #header

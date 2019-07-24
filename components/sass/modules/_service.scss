@@ -1,0 +1,60 @@
+#services{
+  background-color: adjust-hue(lighten($light, 60%), 20deg);
+  padding: 0.5em;
+
+  h1{
+    font-size: 1.5em;
+  }// h1
+
+  h2{
+    font-size: 1.3em;
+    padding: 0.3em 0;
+
+    @include breakpoint($es $sm){  
+      padding: 0.3px 0 0.1px 0;  
+    }
+  } // h2
+
+  p{
+    padding: 0.3em 0;
+    text-align: justify;
+    &.caption{
+      font-size: 1.2em;
+      padding: 0.2rem 0 0.4em 0;
+    }
+  } //p
+
+  section{
+    width: 33%;
+    padding: 0.3rem;
+
+    @include breakpoint(0 $sm){
+        width: 100%;
+        &:not(:last-child){
+          border-bottom: 1px dotted $green;
+        } // not last child    
+    }
+  }// section
+
+  @include breakpoint(0 $sm){
+    .continer-flex{
+      flex-direction: column;
+    } //continer-flex 
+  }
+
+  @include breakpoint($es $sm){
+     
+    .img-responsive{
+      width: 150px;
+      border-radius: 50px;
+      float: left;
+      padding-right: 0.5em;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+    }// img-responsive
+
+  }// breakpoint small device
+  
+} // #services

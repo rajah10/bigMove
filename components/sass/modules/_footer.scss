@@ -1,0 +1,54 @@
+footer{
+  @include clearfix;
+  
+  text-align: left;
+  padding: 0 0 15px 0;
+
+  .footerMenu{
+    @include background(linear-gradient(to bottom, adjust-hue(rgba($green, 0.7), 20deg), adjust-hue(rgba($green, 0.3), 20deg)));
+    margin: 0 auto;
+    padding: 15px 0;
+
+    ul{
+      li{
+        padding: 0.15rem 0 0 0.15rem;
+        
+        @include breakpoint(0 $es){    
+          padding: 0.3rem 0;
+        } 
+      } // li
+
+      li:hover{
+        @include background(linear-gradient(to bottom, rgba($blueLight, 0.9), rgba($blueLight, 0.2)));
+        width: 10rem;
+
+        @include breakpoint(0 $es){
+          width: 100%;
+        } 
+      } // li hover
+
+    } // ul
+
+    section{
+
+      @include breakpoint(0 $es){
+      
+        text-align: center;
+        padding: 0 0 0.3rem 0;
+        margin: 0 0 0.3rem 0;
+
+        &:not(:first-child){
+          border-bottom: 0.1rem dotted $green;
+        } // not last child
+      } // small device breakpoint
+
+    }// section
+
+  } // footerMenu
+        
+  .copyRight{
+    text-align: center;
+    line-height: 2rem;
+  } //copyRight
+
+} // footer

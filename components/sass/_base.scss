@@ -1,0 +1,29 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: adjust-hue(lighten($light, 60%), 20deg);
+  font-size: 100%;
+  color: $dark;
+  font-weight: $normal;
+}
+
+#{headings()}{
+  color: darken(rgba($highlightColor, 0.8), 20%);
+  font-weight: $bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.continer-flex{
+  display: flex;
+  justify-content: space-between;
+
+} // continer-flex
+
+.img-responsive{
+  width: 100%;
+} //img-responsive

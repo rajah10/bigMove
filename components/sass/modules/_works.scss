@@ -1,0 +1,44 @@
+#works{
+  @include clearfix;
+  @include background(linear-gradient(to bottom, adjust-hue(rgba($green, 0.7), 20deg), adjust-hue(rgba($green, 0.3), 20deg)));
+
+  @include breakpoint($sm){
+    min-height: 450px;
+  } // breakpoint small
+
+  padding: 50px 0;
+  header{
+    text-align: center;
+    padding: 0 0 15px 0;
+    line-height: 140%;
+    h1{ 
+      font-size: 1.4em; 
+    } // h1
+  } // header
+
+  .works{
+    @include container(95%);
+
+    @include breakpoint($sm){
+      @include display-flex();
+      @include flex-direction(row);
+      @include align-items(center);
+      @include align-self(baseline);
+      @include flex-wrap(wrap);
+      // @include justify-content(space-between);
+      @include pad(1 1);
+    }
+
+    .content{
+      margin-top: 1%;
+      text-align: center;
+      @include flex-grow(1);
+
+      img{
+        @include border-radius(0 20%);
+      }
+    }
+  }
+
+ 
+} //#works

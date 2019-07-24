@@ -1,0 +1,77 @@
+#nav{
+  @include clearfix;
+  padding: 0;
+  width: 100%;
+    .brand{
+      @include span(3 of 12);
+      height: 50px;
+      float: left;
+      background-image: url('../images/icons/Truck-with-Site-Office-icon.png');
+      background-repeat: no-repeat;
+
+      @include breakpoint(0 $es) {
+       
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        
+      } // breakpoint extra small device  
+
+      @include breakpoint($es $sm) {
+        
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        
+      } // breakpoint  small device 
+
+    } // brand
+
+    .navbar{
+      @include span(last 9 of 12);
+      // padding-top: 20px;
+      
+      ul{
+        list-style: none;
+
+        li{
+          float: right;
+
+          a{
+            display: inline-block;
+            padding: 15px 5px 15px 30px;
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: 2px;
+
+            
+            &.phone   { background-image: url('https://image.flaticon.com/icons/png/512/25/25377.png'); }
+            &.contact { background-image: url('https://image.flaticon.com/icons/png/512/25/25377.png'); }
+            &.news    { background-image: url('https://image.flaticon.com/icons/png/512/14/14711.png'); }
+            &.service { background-image: url('https://image.flaticon.com/icons/png/512/25/25377.png'); }
+            &.aboutus { background-image: url('https://image.flaticon.com/icons/png/512/25/25377.png'); }
+            &.home    { background-image: url('https://image.flaticon.com/icons/svg/25/25694.svg');     }
+            
+            @include breakpoint(0 659px) {
+              span{
+                text-indent: -1500px;
+                display: inline-block; 
+                white-space: nowrap;
+              } // span
+            }// extra small device
+
+            @include breakpoint(660px 782px){
+              padding-left: 15px;
+              &.icon{ background-image: none; }
+            } // breakpoint between small and 740px
+            
+          } // a 
+        } // li
+      } // ul 
+    } // class navbar
+
+} // #nav
